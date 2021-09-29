@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 :root {
 	--main-bg: #ffffff;
 	--second-bg: #fafafb;
 	--txt-color: #455560;
 	--txt-white: #fff;
-	--main-color: #349eff;
+	--main-color: #dd9898;
 	--second-color: #62b4ff;
 
 	--sidebar-width: 300px;
 	--border-radius: 15px;
 	--topnav-height: 110px;
 	--transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	--box-shadow: 17px 9px 38px -5px rgba(0, 0, 0, 0.62);
 }
 
 * {

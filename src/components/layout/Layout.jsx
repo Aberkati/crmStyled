@@ -3,6 +3,7 @@ import { BrowserRouter,Route } from 'react-router-dom'
 import styled from 'styled-components'
 import Routes from '../Routes'
 import Sidebar from '../Sidebar/Sidebar'
+import TopNav from '../Topnav/TopNav'
 
 
 const Layoute = styled.div`
@@ -26,6 +27,7 @@ const Layout = () => {
                 <Layoute>
                     <Sidebar {...props} />
                     <LayoutContent>
+                        <TopNav/>
                         <LayoutContentMain>
                             <Routes/>
                         </LayoutContentMain>
