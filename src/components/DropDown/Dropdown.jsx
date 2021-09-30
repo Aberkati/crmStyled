@@ -53,7 +53,7 @@ font-size : 0.8rem;
 
 
 const Dropdown = (props) => {
-
+console.log(props);
    
     const [open,setOpen] = useState(false)
     return (

@@ -2,8 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import Dropdown from '../DropDown/Dropdown'
 import notifications from '../../assets/JsonData/notification.json'
+//import user_menu from '../../assets/JsonData/user_menus.json'
+import user_image from '../../assets/images/user-icon-image.jpg'
 import NotificationItem from './NotificationItem'
 import { Link } from 'react-router-dom'
+import UserToggle from './UserToggle'
+
+
+const curr_user = {
+    display_name: 'Anas Berkati',
+    image : user_image
+}
+
 
 
 const TopNavBar = styled.div`
@@ -45,6 +55,34 @@ const RightItem = styled.div`
 margin-left : 30px;
 `
 
+
+const RightUser = styled.div`
+display : flex;
+align-items : center;
+`
+const Image = styled.div`
+width : 40px;
+height : 40px;
+border-radius : 50%;
+overflow : hidden;
+margin-right : 10px;
+
+img {
+    width : 100%;
+}
+`
+const Name = styled.div`
+font-size : 1rem;
+font-weight : 600;
+`
+
+const renderUserToggle = (user) => (
+    <div>
+        {console.log("toogle")}
+        <img src={user.image} alt="zzz"/>
+    </div>
+)
+
 const TopNav = () => {
     return (
         <TopNavBar>
@@ -53,7 +91,9 @@ const TopNav = () => {
                 <i className="bx bx-search"></i>
             </TopNavBarSearch>
             <Right>
-                <RightItem> <Dropdown  icon="bx bx-user"/></RightItem>
+                <RightItem> <Dropdown
+                    customToggle={<UserToggle user={ curr_user}/>}
+                    icon="bx bx-user" /></RightItem>
                 <RightItem> <Dropdown
                     icon="bx bx-bell"
                     badge="12"
