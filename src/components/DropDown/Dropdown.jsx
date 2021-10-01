@@ -53,15 +53,15 @@ font-size : 0.8rem;
 
 
 const Dropdown = (props) => {
-console.log(props);
-   
-    const [open,setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
+  //   document.addEventListener('click', console.log("outside"));
     return (
         <DropDowne onClick={() => setOpen(!open)}>
             <ToggleDropDown >
               {props.icon ? <i className={props.icon}></i> : ''}
                 {props.badge ? <BadgeToggleDropDown>{ props.badge}</BadgeToggleDropDown> : ''}
-               
+                {props.customToggle ? props.customToggle : ""}
+                
             </ToggleDropDown>
             <DropDownContent  active={open} >
                 {props.contentData && props.renderItems ? props.contentData.map((item, index) => props.renderItems(item, index)) : ''}

@@ -20,15 +20,15 @@ font-size : 1rem;
 font-weight : 600;
 `
 
-const UserToggle = ({ user }) => {
-   console.log("eee");
+const UserToggle = (props) => {
+ 
     return (
         <RightUser>
             <Image>
-                <img src={user.image} alt="User"/>
+                <img src={props.user.image} alt="User"/>
             </Image>
             <Name>
-                {user.display_name}
+                {props.user.display_name}
             </Name>
         </RightUser>
     )
